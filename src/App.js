@@ -2,10 +2,16 @@
 import './App.css';
 
 function App() {
+  const name = 'Francois'
+  const x = false
+
   return (
-    <div className="App">
+    <>
       <h1>Hello from React</h1>
-    </div>
+      <h2>Allo {name}</h2>
+      <h2>Calcul {1 +1}</h2>
+      <h2>Conditionnel {x ? 'vrai' : 'faux'}</h2>
+    </>
   );
 }
 
