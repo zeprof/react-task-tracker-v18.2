@@ -22,3 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .idea/copilot
+.idea/inspectionProfiles/
+.idea/jpa-buddy.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/react-task-tracker-v18.2.iml
+.idea/vcs.xml
