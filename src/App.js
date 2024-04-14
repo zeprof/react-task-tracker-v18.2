@@ -9,13 +9,19 @@ function App() {
   const [tasks, setTasks] = useState([])
 
   useEffect(() => {
-    const fetchTasks = async () => {
-      const res = await fetch('http://localhost:5000/tasks')
-      const data = await res.json()
-      console.log(data)
+    const getTasks = async () => {
+      const tasksFromServer = await fetchTasks()
+      setTasks(tasksFromServer)
     }
-    fetchTasks()
-  })
+    getTasks()
+  }, [])  // Ajout de dependency array pour prevenir le 'useEffect' a chaquer 'render()'
+  // C'est comme le lifecycle event 'ComponentDidMount'
+
+  const fetchTasks = async () => {
+    const res = await fetch('http://localhost:5000/tasks')
+    const data = await res.json()
+    return data
+  }
 
   const addTask = (task) => {
     const id = Math.floor(Math.random() * 10000) + 1
