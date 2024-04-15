@@ -1,22 +1,28 @@
 {
   "tasks": [
-      {
-          "id": 1,
-          "text": "Preparer mon cours de projet",
-          "day": "9 Septembre @ 14:25",
-          "reminder": true
-      },
-      {
-          "id": 2,
-          "text": "Partir le 1er Sprint",
-          "day": "10 Septembre @ 09:00",
-          "reminder": false
-      },
-      {
-          "id": 3,
-          "text": "Faire le Daily Standup Meeting",
-          "day": "10 Septembre @ 10:00",
-          "reminder": false
-      }
+    {
+      "id": 1,
+      "text": "Preparer mon cours de projet",
+      "day": "9 Septembre @ 14:25",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Faire le Daily Standup Meeting",
+      "day": "10 Septembre @ 10:00",
+      "reminder": true
+    },
+    {
+      "text": "Dire allo à Céline",
+      "day": "neow",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Le gars",
+      "day": "bin la",
+      "reminder": true,
+      "id": 5
+    }
   ]
 }
