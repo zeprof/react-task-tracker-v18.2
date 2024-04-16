@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Todo react app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projet qui montre via les tags (v01, ..., v39) l'utilisation de React via un todo app
+
+Les versions v37, v38, v39 requierent un backend Spring Boot (non inclus ici)
 
 ## Available Scripts
 
