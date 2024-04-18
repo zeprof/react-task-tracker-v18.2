@@ -11,6 +11,7 @@ import PageLayout from "./components/PageLayout";
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([])
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const getTasks = async () => {
@@ -22,8 +23,9 @@ function App() {
   // C'est comme le lifecycle event 'ComponentDidMount'
 
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:8080/todos')
+    const res = await fetch('http://localhost:8080/todos').catch((e) => setError(e))
     if (!res.ok) {
+      setError({message: "Failed to fetch tasks", status: 500})
       throw {message: "Failed to fetch tasks", status: 500}
     }
     return res.json()
@@ -83,6 +85,7 @@ function App() {
     )
   }
 
+  if (error) throw error
   return (
     <div className='container'>
 
