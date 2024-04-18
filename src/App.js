@@ -88,22 +88,18 @@ function App() {
   if (error) throw error
   return (
     <div className='container'>
-
-      <Header onAdd={() => setShowAddTask(!showAddTask)}
-              showAdd={showAddTask}/>
-
       <Routes>
-        <Route path="/" element={<PageLayout/>}/>
-          <Route index path="/"
+        <Route path="/" element={<PageLayout showAddTask={showAddTask} setShowAddTask={setShowAddTask()}/>}>
+          <Route index
                  element={<TaskContainer
-                               showAddTask={showAddTask}
-                               addTask={addTask}
-                               tasks={tasks}
-                               deleteTask={deleteTask}
-                               toggleReminder={toggleReminder}/>}/>
-        <Route path='/about' element={<About/>}/>
+                   showAddTask={showAddTask}
+                   addTask={addTask}
+                   tasks={tasks}
+                   deleteTask={deleteTask}
+                   toggleReminder={toggleReminder}/>}/>
+          <Route path='about' element={<About/>}/>
+        </Route>
       </Routes>
-      <Footer/>
     </div>
 
   )
