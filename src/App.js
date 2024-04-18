@@ -89,7 +89,7 @@ function App() {
   return (
     <div className='container'>
       <Routes>
-        <Route path="/" element={<PageLayout showAddTask={showAddTask} setShowAddTask={setShowAddTask()}/>}>
+        <Route path="/" element={<PageLayout showAddTask={showAddTask} setShowAddTask={setShowAddTask}/>}>
           <Route index
                  element={<TaskContainer
                    showAddTask={showAddTask}
